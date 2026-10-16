@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%230d1b3d'/%3E%3Cpath d='M12 6l1.8 3.7 4 .6-2.9 2.8.7 4L12 15.2 8.4 17l.7-4-2.9-2.8 4-.6z' fill='%23d4a017'/%3E%3C/svg%3E">
+<title>Plateforme ASS – Gestion sportive scolaire</title>
+<link rel="stylesheet" href="css/style.css?v=15">
+</head>
+<body>
+<div id="login" class="login hidden">
+  <form id="loginForm" class="card">
+    <div class="brand dark"><span class="logo" style="background:var(--navy)"><img src="img/logo.png" alt=""></span><div>Plateforme ASS<small>Gestion sportive scolaire</small></div></div>
+    <label>Email<input type="email" id="lEmail" required></label>
+    <label>Mot de passe<input type="password" id="lPass" required></label>
+    <button class="btn">Se connecter</button>
+    <p id="lErr" class="err"></p>
+  </form>
+</div>
+<div id="app" class="layout hidden">
+  <aside class="sidebar">
+    <div class="side-title">Plateforme ASS — <span>Gestion sportive</span></div>
+    <div class="side-brand"><span class="side-logo"><img src="img/logo.png" alt="Logo"></span><small id="etabName"></small><p>Évaluation • Détection • Performance</p></div>
+    <nav>
+      <div class="nav-group" data-g="Pilotage"><div class="nav-t">Pilotage</div><a href="#dashboard"><i data-i="dashboard"></i><span>Tableau de bord</span></a></div>
+      <div class="nav-group" data-g="Gestion"><div class="nav-t">Gestion</div><a href="#ass"><i data-i="school"></i><span>Association (ASS)</span></a><a href="#eleves"><i data-i="users"></i><span>Élèves</span></a><a href="#finances"><i data-i="wallet"></i><span>Finances</span></a></div>
+      <div class="nav-group" data-g="Tests & évaluation"><div class="nav-t">Tests & évaluation</div><a href="#tests"><i data-i="timer"></i><span>Tests physiques</span></a><a href="#techniques"><i data-i="ball"></i><span>Tests techniques</span></a><a href="#tactiques"><i data-i="tactic"></i><span>Tests tactiques</span></a><a href="#mental"><i data-i="brain"></i><span>Tests mentaux</span></a><a href="#evaluation"><i data-i="radar"></i><span>Évaluation des joueurs</span></a></div>
+      <div class="nav-group" data-g="Sport d'élite"><div class="nav-t">Sport d'élite</div><a href="#selection"><i data-i="target"></i><span>Sélection élite</span></a><a href="#elite"><i data-i="medal"></i><span>Équipes & programmes</span></a><a href="#competitions"><i data-i="trophy"></i><span>Compétitions</span></a></div>
+      <div class="nav-group" data-g="Sport de masse"><div class="nav-t">Sport de masse</div><a href="#masse"><i data-i="activity"></i><span>Activités & rencontres</span></a></div>
+      <div class="nav-group" data-g="Configuration"><div class="nav-t">Configuration</div><a href="#normes"><i data-i="ruler"></i><span>Barèmes des tests</span></a><a href="#parametres"><i data-i="settings"></i><span>Paramètres</span></a></div>
+    </nav>
+    <div class="side-mark"><img src="img/logo.png" alt=""></div>
+    <div class="side-foot"><span class="side-status" id="sideMode"></span></div>
+  </aside>
+  <div class="main">
+    <header class="topbar"><button class="icon-btn" id="menuBtn" aria-label="Menu"><i data-i="menu"></i></button><div class="crumb" id="crumb"></div>
+      <div class="chips"><span class="chip gold" id="chipSaison"></span><span class="chip" id="modeInfo"></span></div></header>
+    <main id="view"></main>
+  </div>
+</div>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.bundle.js?v=15"></script>
+</body>
+</html>
